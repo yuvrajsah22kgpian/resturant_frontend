@@ -50,7 +50,7 @@ const SignupPage: React.FC = () => {
 
   const onSubmit = async (values: SignupFormValues) => {
     try {
-      const response = await fetch('http://localhost:3000/api/users/register', {
+      const response = await fetch('https://resturant-backend-api.onrender.com/api/users/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

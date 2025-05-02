@@ -40,7 +40,7 @@ const handleCheckout = async () => {
     }
 
     // Post to API
-    const response = await fetch('http://localhost:3000/api/orders/post_order', {
+    const response = await fetch('https://resturant-backend-api.onrender.com/api/orders/post_order', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

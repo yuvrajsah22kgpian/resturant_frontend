@@ -22,7 +22,7 @@ const Menu: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<MenuCategory>('main-courses');
   const [products, setProducts] = useState<any[]>([])
   useEffect(() => {
-    fetch("http://localhost:3000/api/products", {
+    fetch("https://resturant-backend-api.onrender.com/api/products", {
       method: 'GET'
     }).then(r => r.json()).then((data: any[]) => {
       setProducts(data.filter((item) => resolveItemCategory(item.category) === activeCategory))

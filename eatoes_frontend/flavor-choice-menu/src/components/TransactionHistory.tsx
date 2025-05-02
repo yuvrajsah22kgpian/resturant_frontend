@@ -26,7 +26,7 @@ const TransactionHistory: React.FC = () => {
       try {
         const uid = localStorage.getItem("uid");
         if (!uid) throw new Error("User ID not found in localStorage.");
-        const response = await fetch(`http://localhost:3000/api/orders/get_order_history/${uid}`);
+        const response = await fetch(`https://resturant-backend-api.onrender.com/api/orders/get_order_history/${uid}`);
         if (!response.ok) throw new Error("Failed to fetch order history.");
         const data = await response.json();
 

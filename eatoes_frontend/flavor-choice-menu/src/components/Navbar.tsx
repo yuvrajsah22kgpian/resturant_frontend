@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
     setIsAuthenticated(localStorage.getItem("token") !== null)
     const uid = localStorage.getItem("uid")
     if(isAuthenticated && uid){
-      fetch("http://localhost:3000/api/users/" + uid, {
+      fetch("https://resturant-backend-api.onrender.com/api/users/" + uid, {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' }
       }).then((res) => {

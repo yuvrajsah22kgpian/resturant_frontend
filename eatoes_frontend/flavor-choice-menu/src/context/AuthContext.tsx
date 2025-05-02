@@ -53,7 +53,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     try {
       setIsLoading(true);
       // Replace this with your actual backend API call
-      const response = await fetch('http://localhost:3000/api/login', {
+      const response = await fetch('https://resturant-backend-api.onrender.com/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -87,7 +87,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     try {
       setIsLoading(true);
       // Using the API endpoint from your Postman collection
-      const response = await fetch('http://localhost:3000/api/users/register', {
+      const response = await fetch('https://resturant-backend-api.onrender.com/api/users/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
