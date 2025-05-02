@@ -14,10 +14,13 @@ const CartDetails: React.FC = () => {
   
   const totalPrice = items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 
+ const product_quantity=items.reduce((sum,item) => (item.quantity), 0);
+  const product_id=items.reduce((sum,item) => (item.id), 0);
+
   const order_details=  [
     {
-        "product_id": "68117b155d6e08e4e6fddbe4",
-        "quantity": 2
+        "product_id": product_id,
+        "quantity": product_quantity
     }
 ]
 
